@@ -17,6 +17,6 @@ python uart/ -p {platform} -m {mode}
 
 ### Class Methods
 - read_buffer(): empty's UART and returns string
-- twos_compliment(): handy method for converting unsinged integer bit strings into signed integer bit strings
-- read_hexL()
-()
+- twos_compliment(): given a hexidecimal bit string, return a signed integer
+- read_hex(): calls read_buffer() and twos_compliment() and returns integer
+- send_hex(): given an integer, convert into a hex bit string
