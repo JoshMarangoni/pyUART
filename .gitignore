@@ -1,0 +1,15 @@
+__pycache__/
+.idea/
+*/logs/
+venv/
+tf114/
+source/panel_predictor/panel_finder/panel_classifier/out
+.vscode/
+out/
+
+*.png
+*.jpg
+*.mov
+*.mp4
+*.pyc
+*.avi
