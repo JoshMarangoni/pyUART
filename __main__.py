@@ -3,7 +3,7 @@ Uart driver for quickly testing the uart
 
 '''
 
-from source.uart.uart import Uart
+from uart import Uart
 import argparse
 import time
 
