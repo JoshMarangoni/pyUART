@@ -7,11 +7,16 @@ cd pyUart
 python uart/ -p {platform} -m {mode}
 ```
 
-### Driver modes
-- Send: You will be prompted to input a string and press enter, which will be transmitted through the UART.
-- Listen: Program will listen on UART port and print to the console
-
 ### Arguments
 - platform: laptop (Ubuntu), nano, pi
 - mode: listen, send
 
+### Driver modes
+- Send: You will be prompted to input a string and press enter, which will be transmitted through the UART.
+- Listen: Program will listen on UART port and print to the console
+
+### Class Methods
+- read_buffer(): empty's UART and returns string
+- twos_compliment(): handy method for converting unsinged integer bit strings into signed integer bit strings
+- read_hexL()
+()
