@@ -16,7 +16,8 @@ def write_chars(uart):
         time.sleep(0.01)
         try:
             received_str = uart.read_buffer().replace('\x00','')
-            print(chr(int(received_str)))
+            if received_str != '':
+                print(chr(int(received_str)))
         except ValueError as e:
             print(e)
         i += 1

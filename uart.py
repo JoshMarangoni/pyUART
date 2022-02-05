@@ -14,17 +14,21 @@ class Uart():
 			parity=serial.PARITY_NONE,
 			stopbits=serial.STOPBITS_ONE,
 			bytesize=serial.EIGHTBITS,
-			timeout=0
+			timeout=0,
+			xonxoff=False,
+			dsrdtr=False,
+			rtscts=False,
+			exclusive=True
 		)
 		self.ser.reset_input_buffer()
 		self.ser.reset_output_buffer()
+		if not self.ser.is_open:
+			print("Failed to open serial port")
 
 	''' Reads and empties all contents of receive buffer '''
 	def read_buffer(self):
 		num_bytes = self.ser.inWaiting()
 		received_data = self.ser.read(num_bytes)
-		# return self.ser.read()
-		# return received_data
 		return received_data.decode()
 
 	'''
